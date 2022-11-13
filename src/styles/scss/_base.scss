@@ -1,0 +1,28 @@
+// Colors
+$color-primary-red: #f65351;
+$color-primary-blue: #0a317b;
+$color-white: #ffffff;
+$color-grayish-blue-very-light: #f7fafd;
+$color-grayish-blue-lighter: #e5effa;
+$color-grayish-blue-light: #dde7ee;
+$color-grayish-blue: #939dae;
+$color-grayish-blue-dark: #5e6778;
+$color-grayish-blue-very-dark: #1c202b;
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #f2f2f2;
+}
