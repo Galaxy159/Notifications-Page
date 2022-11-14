@@ -3,7 +3,7 @@ import "./styles/App.css";
 import Notification from "./components/Notification";
 import Topbar from "./components/Topbar";
 import { notificationsList } from "./components/notificationsList";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   const [unread, setUnread] = useState(
@@ -27,7 +27,7 @@ function App() {
           </div>
         </main>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
