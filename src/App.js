@@ -19,10 +19,10 @@ function App() {
     <>
       <div className="container">
         <main className="main">
-          <Topbar unread={unread.length} handler={handleMarkReadClick} />
+          <Topbar unread={unread} handler={handleMarkReadClick} />
           <div className="notifications">
             {notificationsList.map((not) => (
-              <Notification key={not.id} details={not} />
+              <Notification key={not.id} details={not} setunread={setUnread} />
             ))}
           </div>
         </main>

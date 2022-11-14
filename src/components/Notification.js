@@ -1,9 +1,12 @@
-export default function Notification(props) {
-  const { details } = props;
-
+import { notificationsList } from "./notificationsList";
+export default function Notification({ details, setunread }) {
   return (
     <>
       <div
+        onClick={() => {
+          details.unread = false;
+          setunread(notificationsList.filter((not) => not.unread === true));
+        }}
         className={details.unread ? "notification unread-bg" : "notification"}
       >
         <img
