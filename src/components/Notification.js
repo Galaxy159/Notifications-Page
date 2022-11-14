@@ -12,21 +12,19 @@ export default function Notification(props) {
           className="notification__avatar"
         />
         <div className="notification__content">
-          <a href="#" className="notification__content--name">
-            {details.name}
-          </a>
+          <span className="notification__content--name">{details.name}</span>
           <span className="notification__content--description">
             {details.description}
           </span>
           {details.contentReact && (
-            <a href="#" className="notification__content--react">
+            <span className="notification__content--react">
               {details.contentReact}
-            </a>
+            </span>
           )}
           {details.contentGroup && (
-            <a href="#" className="notification__content--group">
+            <span className="notification__content--group">
               {details.contentGroup}
-            </a>
+            </span>
           )}
           <div
             className={
@@ -45,7 +43,7 @@ export default function Notification(props) {
         {details.contentPicture && (
           <img
             src={details.contentPicture}
-            alt="Picture"
+            alt="Chess club"
             className="notification__content--picture"
           />
         )}
