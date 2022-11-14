@@ -1,12 +1,14 @@
 import { notificationsList } from "./notificationsList";
 export default function Notification({ details, setunread }) {
+  function handleNotificationClick() {
+    details.unread = false;
+    setunread(notificationsList.filter((not) => not.unread === true));
+  }
+
   return (
     <>
       <div
-        onClick={() => {
-          details.unread = false;
-          setunread(notificationsList.filter((not) => not.unread === true));
-        }}
+        onClick={handleNotificationClick}
         className={details.unread ? "notification unread-bg" : "notification"}
       >
         <img
