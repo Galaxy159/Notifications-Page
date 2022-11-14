@@ -9,6 +9,15 @@ $color-grayish-blue: #939dae;
 $color-grayish-blue-dark: #5e6778;
 $color-grayish-blue-very-dark: #1c202b;
 
+// Media
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -24,5 +33,23 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: #f2f2f2;
+  background-color: $color-grayish-blue-very-light;
+}
+
+.container {
+  max-width: 73rem;
+  background-color: $color-white;
+  margin: 6.3rem auto 8.9rem;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2rem 6rem rgba(73, 97, 168, 0.05);
+
+  @include respond(phone) {
+    padding: 3rem 1.6rem;
+    margin: 0 auto;
+  }
+}
+
+a {
+  text-decoration: none;
 }
